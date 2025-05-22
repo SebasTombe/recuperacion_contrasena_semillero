@@ -24,7 +24,7 @@ export default function PasswordRecoveryForm() {
       // Aquí iría la lógica real para enviar el correo de recuperación
       await new Promise((resolve) => setTimeout(resolve, 1500))
       setIsSubmitted(true)
-    } catch (err) {
+    } catch (_err) {
       setError("Ocurrió un error al enviar el correo. Intenta nuevamente.")
     } finally {
       setIsLoading(false)
