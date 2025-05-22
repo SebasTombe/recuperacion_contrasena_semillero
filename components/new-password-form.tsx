@@ -60,7 +60,7 @@ export default function NewPasswordForm() {
 
     try {
       // Enviar solicitud al endpoint con el token y la nueva contraseña
-      const response = await fetch("http://54.234.86.157:8080/recuperacion_contrasena/api/password_reset/confirm/", {
+      const response = await fetch("https://54.234.86.157/recuperacion_contrasena/api/password_reset/confirm/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
