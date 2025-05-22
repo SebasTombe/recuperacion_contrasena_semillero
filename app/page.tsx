@@ -1,3 +1,4 @@
+import { Suspense } from "react"
 import NewPasswordForm from "@/components/new-password-form"
 
 export default function Home() {
@@ -8,7 +9,9 @@ export default function Home() {
           <h1 className="text-2xl font-bold">Establece tu nueva contraseña</h1>
           <p className="text-gray-500 mt-2">Crea una contraseña segura para tu cuenta</p>
         </div>
-        <NewPasswordForm />
+        <Suspense fallback={<div className="text-center p-4">Cargando formulario...</div>}>
+          <NewPasswordForm />
+        </Suspense>
       </div>
     </main>
   )
